@@ -1,0 +1,14 @@
+.DS_Store
+/.gitconfig
+/.gradle/
+/_assets/
+/_site/
+/_tmp/
+/build/
+.idea/
+.cache/
+/public/
+.bundle/
+/node_modules/
+/Gemfile.lock
+/package-lock.json

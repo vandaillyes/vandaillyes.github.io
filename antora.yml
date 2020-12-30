@@ -1,0 +1,7 @@
+name: pierre_stuff
+version: '1.0'
+title: Pierre's Stuff
+nav:
+- modules/art/nav.adoc
+- modules/music/nav.adoc
+- modules/science/nav.adoc
