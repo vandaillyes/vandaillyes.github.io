@@ -6,8 +6,6 @@
 /_tmp/
 /build/
 .idea/
-.cache/
-/public/
 .bundle/
 /node_modules/
 /Gemfile.lock
