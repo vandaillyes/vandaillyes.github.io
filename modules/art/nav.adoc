@@ -1,2 +1,0 @@
-.xref:index.adoc[Art]
-* xref:street_art.adoc[Street Art]

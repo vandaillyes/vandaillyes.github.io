@@ -1,6 +1,0 @@
-.xref:index.adoc[Science]
-* xref:prologue.adoc[Prologue]
-* xref:energy1.adoc[Energy – Episode 1]
-* xref:energy2.adoc[Energy – Episode 2]
-* xref:energy3.adoc[Energy – Episode 3]
-* xref:relativity.adoc[Sensing Relativity]

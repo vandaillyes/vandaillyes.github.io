@@ -1,2 +1,0 @@
-.xref:index.adoc[Music]
-* xref:3b.adoc[Brel Brassens Barbara]
