@@ -54,7 +54,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="pierre_stuff" data-version="1.0">
+<div class="nav-container" data-component="pierre_stuff" data-version="0.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -106,14 +106,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Pierre&#x27;s Stuff</span>
-    <span class="version">1.0</span>
+    <span class="version">0.1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <span class="title">Pierre's Stuff</span>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">1.0</a>
+          <a href="../index.html">0.1</a>
         </li>
       </ul>
     </li>
@@ -753,5 +753,29 @@ Used in electricity. Larger derived units are more commonly used: kWh, mWh, GWh,
 </footer>
 <script src="../../../_/js/site.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
   </body>
 </html>
