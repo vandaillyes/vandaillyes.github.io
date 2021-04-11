@@ -8,6 +8,7 @@ abbr
 .tooltip
 {
     position:absolute;
+    z-index:-1;
     background-color: #fafafa;
     opacity: 1;
     border: 1px solid #666;
