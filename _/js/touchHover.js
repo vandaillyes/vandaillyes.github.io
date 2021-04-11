@@ -32,9 +32,9 @@ $(document).ready(function() {
 		$(this).after('<span class="tooltip">' + $(this).data('title') + '</span>');
 		
 		// position the tooltip 4 pixels above and 4 pixels to the left of the abbreviation
-		var left = $(this).position().left + $(this).width() + 4;
+		var right = $(this).position().right + $(this).width() + 4;
 		var top = $(this).position().top - 4;
-		$(this).next().css('left',left);
+		$(this).next().css('right',right);
 		$(this).next().css('top',top);				
 		
 	});
@@ -48,7 +48,7 @@ $(document).ready(function() {
 		$(this).mouseover();
 		
 		// after a slight 2 second fade, fade out the tooltip for 1 second
-		$(this).next().animate({opacity: 0.9},{duration: 60000, complete: function(){
+		$(this).next().animate({opacity: 1},{duration: 60000, complete: function(){
 			$(this).fadeOut(1000);
 		}});
 		
