@@ -33,7 +33,7 @@ $(document).ready(function() {
 		
 		// position the tooltip 4 pixels above and 4 pixels to the left of the abbreviation
 		var left = $(this).position().left + $(this).width() + 4;
-		var top = $(this).position().top - 20;
+		var top = $(this).position().top - 4;
 		$(this).next().css('left',left);
 		$(this).next().css('top',top);				
 		
