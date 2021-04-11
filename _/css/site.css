@@ -1,7 +1,8 @@
 abbr
 {
-        border-bottom: 1px dotted #666;
-        cursor: help;
+    border-bottom: 1px dotted #666;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .tooltip
