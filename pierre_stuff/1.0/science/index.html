@@ -69,6 +69,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="relativity.html">Sensing Relativity</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autochromes.html">Autochromes: The Tale of the Potato Starch</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -145,6 +148,9 @@ Note aux lecteurs français: bizarrement l&#8217;écriture dans ce domaine me vi
 <li>
 <p><a href="relativity.html" class="page">Sensing Relativity</a></p>
 </li>
+<li>
+<p><a href="autochromes.html" class="page">Autochromes: The Tale of the Potato Starch</a></p>
+</li>
 </ul>
 </div>
 </article>
@@ -164,5 +170,29 @@ Note aux lecteurs français: bizarrement l&#8217;écriture dans ce domaine me vi
 <script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/pierre_stuff/1.0/science/index.html"></script>
 <script async src="../../../_/../search-index.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
   </body>
 </html>
