@@ -13,9 +13,6 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../..">Pierre&#x27;s Stuff</a>
-        <div class="navbar-item">
-          <input id="search-input" type="text" placeholder="Search docs">
-        </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -50,6 +47,27 @@
   <nav class="nav-menu">
     <h3 class="title"><a href="../index.html">About &quot;Pierre&#x27;s Stuff&quot;</a></h3>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../music/index.html">Music</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../music/3b.html">B, B, &amp; B</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../music/brassens.html">Brassens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../music/gorille.html">Le Gorille</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Science</a>
@@ -344,7 +362,7 @@ The fact that <strong><em>r</em></strong> is smaller than <strong><em>w</em></st
 </ul>
 </div>
 <div class="paragraph">
-<p>In many instances, <strong><em>\$\vec{f}\$<sub>total</sub>(t)</em></strong> can be expressed as a function of <strong><em>\$\vec{pos}\$(t)</em></strong> <sup class="footnote">[<abbr title="For example, gravity: the gravitational force applying to an object attracted by the Earth (i.e. its weight) depends on the position of the object relative to the Earth. It points from the object towards the centre of the Earth, and we remember that its magnitude depends on the square distance from the object to the centre of the Earth.">1</abbr>]</sup> and/or <strong><em>\$\vec{v}\$(t)</em></strong> <sup class="footnote">[<abbr title="For example, air friction: the resisting force applying to a moving object depends on the velocity of this object relative to the air.">2</abbr>]</sup>.</p>
+<p>In many instances, <strong><em>\$\vec{f}\$<sub>total</sub>(t)</em></strong> can be expressed as a function of <strong><em>\$\vec{pos}\$(t)</em></strong> <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and/or <strong><em>\$\vec{v}\$(t)</em></strong> <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>As a consequence, the relation <strong><em>\$\vec{f}\$<sub>total</sub>(t) = m\$\vec{γ}\$(t)</em></strong> can be transformed into an equation that binds <strong><em>\$\vec{pos}\$(t)</em></strong>, <strong><em>\$\vec{v}\$(t)</em></strong>, and <strong><em>\$\vec{γ}\$(t)</em></strong>. In other words, a relation between <strong><em>\$\vec{pos}\$(t)</em></strong>, its variation and the variation of its variation! Maths will rescue us here&#8230;&#8203; Such equations are called <em>differential equations</em>, and have been studied extensively. They allow us to calculate <strong><em>\$\vec{pos}\$(t)</em></strong> as a function of time only, i.e. to predict the object&#8217;s trajectory. To be honest, most differential equations can&#8217;t be solved into clean formulae. Instead, <strong><em>\$\vec{pos}\$(t)</em></strong> has to be calculated step by step by a computer, following small time increments. But in some very useful cases, we can find a nice formula describing <strong><em>\$\vec{pos}\$(t)</em></strong>, a famous example being the movement of satellites around planets, or planets around stars.</p>
@@ -705,6 +723,15 @@ Used in electricity. Larger derived units are more commonly used: kWh, mWh, GWh,
 </div>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. For example, gravity: the gravitational force applying to an object attracted by the Earth (i.e. its weight) depends on the position of the object relative to the Earth. It points from the object towards the centre of the Earth, and we remember that its magnitude depends on the square distance from the object to the centre of the Earth.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. For example, air friction: the "resisting force" applying to a moving object depends on the velocity of this object relative to the air.
+</div>
+</div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
@@ -717,9 +744,6 @@ Used in electricity. Larger derived units are more commonly used: kWh, mWh, GWh,
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/pierre_stuff/1.0/science/prologue.html"></script>
-<script async src="../../../_/../search-index.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -745,7 +769,5 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
 })
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>
-<script src='../../../_/js/touchHover.js'></script>
   </body>
 </html>

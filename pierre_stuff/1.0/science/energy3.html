@@ -13,9 +13,6 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../..">Pierre&#x27;s Stuff</a>
-        <div class="navbar-item">
-          <input id="search-input" type="text" placeholder="Search docs">
-        </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -50,6 +47,27 @@
   <nav class="nav-menu">
     <h3 class="title"><a href="../index.html">About &quot;Pierre&#x27;s Stuff&quot;</a></h3>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../music/index.html">Music</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../music/3b.html">B, B, &amp; B</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../music/brassens.html">Brassens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../music/gorille.html">Le Gorille</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Science</a>
@@ -132,9 +150,30 @@
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/pierre_stuff/1.0/science/energy3.html"></script>
-<script async src="../../../_/../search-index.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
   </body>
 </html>
